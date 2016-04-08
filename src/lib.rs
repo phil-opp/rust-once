@@ -1,10 +1,13 @@
 #![no_std]
 
-#[cfg(not(test))]
-extern crate core as std;
-
 #[cfg(test)]
 extern crate std;
+
+// Re-export libcore using an alias so that the macros can work in no_std
+// crates while remaining compatible with normal crates.
+#[allow(private_in_public)]
+#[doc(hidden)]
+pub use core as __core;
 
 /** This macro can be used to ensure that a function is called only once. It panics if the function
 is called a second time.
@@ -52,7 +55,7 @@ macro_rules! assert_has_not_been_called {
     };
     ($($arg:tt)+) => {{
         fn assert_has_not_been_called() {
-            use std::sync::atomic::{AtomicBool, ATOMIC_BOOL_INIT, Ordering};
+            use $crate::__core::sync::atomic::{AtomicBool, ATOMIC_BOOL_INIT, Ordering};
             static CALLED: AtomicBool = ATOMIC_BOOL_INIT;
             let called = CALLED.swap(true, Ordering::Relaxed);
             assert!(called == false, $($arg)+);
