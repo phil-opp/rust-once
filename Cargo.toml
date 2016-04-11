@@ -9,6 +9,5 @@ keywords = ["once", "called", "no_std"]
 
 repository = "https://github.com/phil-opp/rust-once"
 documentation = "https://phil-opp.rustdocs.org/once/index.html"
-homepage = "http://os.phil-opp.com/kernel-heap.html#a-better-allocator"
 
 [dependencies]
