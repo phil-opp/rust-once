@@ -104,13 +104,13 @@ macro_rules! lazy_static {
                                     while INITIALIZED.load(Ordering::Relaxed) != 2 {}
                                 },
                                 2 => {}, // now it's initialized
-                                _ => $crate::__core::intrinsics::unreachable(),
+                                _ => unreachable!(),
                             }
                         }
 
                         match *DATA.0.get() {
                             Some(ref x) => x,
-                            None => $crate::__core::intrinsics::unreachable(),
+                            None => unreachable!(),
                         }
                     }
 
