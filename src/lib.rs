@@ -9,6 +9,8 @@ extern crate std;
 #[doc(hidden)]
 pub use core as __core;
 
+mod lazy_static;
+
 /** This macro can be used to ensure that a function is called only once. It panics if the function
 is called a second time.
 
