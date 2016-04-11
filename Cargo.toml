@@ -8,6 +8,7 @@ description = "This crate provides an `assert_has_not_been_called!` macro that p
 keywords = ["once", "called", "no_std"]
 
 repository = "https://github.com/phil-opp/rust-once"
-documentation = "https://crates.fyi/crates/once/"
+documentation = "https://phil-opp.rustdocs.org/once/index.html"
+homepage = "http://os.phil-opp.com/kernel-heap.html#a-better-allocator"
 
 [dependencies]
