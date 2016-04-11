@@ -30,7 +30,7 @@ trait.
 Using the macro:
 
 ```rust
-#![feature(const_fn, core_intrinsics)]
+#![feature(const_fn)]
 
 #[macro_use]
 extern crate once;
