@@ -113,7 +113,7 @@ fn test_hygiene2() {
         assert_has_not_been_called!();
 
         #[allow(dead_code)]
-        static HAS_RUN: bool = false;
+        static CALLED: i32 = 42;
     }
     init();
 }
