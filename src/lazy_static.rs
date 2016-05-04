@@ -126,6 +126,7 @@ macro_rules! lazy_static {
         #[allow(missing_copy_implementations)]
         #[allow(non_camel_case_types)]
         #[allow(dead_code)]
+        #[allow(missing_debug_implementations)]
         $(#[$attr])*
         pub struct $N {__private_field: ()}
         #[doc(hidden)]
@@ -135,6 +136,7 @@ macro_rules! lazy_static {
         #[allow(missing_copy_implementations)]
         #[allow(non_camel_case_types)]
         #[allow(dead_code)]
+        #[allow(missing_debug_implementations)]
         $(#[$attr])*
         struct $N {__private_field: ()}
         #[doc(hidden)]
