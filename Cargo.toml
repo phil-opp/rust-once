@@ -4,7 +4,7 @@ version = "0.3.1"
 authors = ["Philipp Oppermann <dev@phil-opp.com>"]
 license = "Apache-2.0/MIT"
 
-description = "This crate provides a port of the lazy_static macro. It also provides an assert_has_not_been_called! macro that panics if the surrounding function is called twice. Useful for initialization functions."
+description = "This crate provides an assert_has_not_been_called! macro that panics if the surrounding function is called twice. Useful for initialization functions."
 keywords = ["once", "called", "no_std"]
 
 repository = "https://github.com/phil-opp/rust-once"
