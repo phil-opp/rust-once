@@ -54,9 +54,12 @@ fn main() {
 }
 ```
 # Implementation details
-The `Deref` implementation uses a hidden static variable that is guarded by a atomic check on each access.
+The `Deref` implementation uses a hidden static variable that is guarded by a atomic check on
+each access.
 **/
 #[macro_export]
+#[deprecated(since = "0.3.0", note = "The official lazy_static static crate has a `spin_no_std`
+feature now. Please use that for your no_std projects.")]
 macro_rules! lazy_static {
     ($(#[$attr:meta])* static ref $N:ident : $T:ty = $e:expr; $($t:tt)*) => {
         lazy_static!(PRIV, $(#[$attr])* static ref $N : $T = $e; $($t)*);
