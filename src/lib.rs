@@ -5,9 +5,8 @@ extern crate std;
 
 // Re-export libcore using an alias so that the macros can work in no_std
 // crates while remaining compatible with normal crates.
-#[allow(private_in_public)]
 #[doc(hidden)]
-pub use core as __core;
+pub extern crate core as __core;
 
 /** This macro can be used to ensure that a function is called only once. It panics if the function
 is called a second time.
