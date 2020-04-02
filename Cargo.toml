@@ -1,6 +1,6 @@
 [package]
 name = "once"
-version = "0.3.3"
+version = "0.3.4"
 authors = ["Philipp Oppermann <dev@phil-opp.com>"]
 license = "Apache-2.0/MIT"
 
