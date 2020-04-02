@@ -54,8 +54,8 @@ macro_rules! assert_has_not_been_called {
     };
     ($($arg:tt)+) => {{
         fn assert_has_not_been_called() {
-            use $crate::__core::sync::atomic::{AtomicBool, ATOMIC_BOOL_INIT, Ordering};
-            static CALLED: AtomicBool = ATOMIC_BOOL_INIT;
+            use $crate::__core::sync::atomic::{AtomicBool, Ordering};
+            static CALLED: AtomicBool = AtomicBool::new(false);
             let called = CALLED.swap(true, Ordering::Relaxed);
             assert!(called == false, $($arg)+);
         }
